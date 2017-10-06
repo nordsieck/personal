@@ -32,7 +32,8 @@
 
 (defun my-go-mode-hook ()
   (add-hook 'before-save-hook #'gofmt-before-save)
-  (local-set-key (kbd "M-.") 'godef-jump))
+  (local-set-key (kbd "M-.") 'godef-jump)
+  (local-set-key (kbd "M-*") 'pop-tag-mark))
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 
 ;; web
@@ -42,4 +43,9 @@
   (if (equal web-mode-content-type "jsx")
       (let ((web-mode-enable-part-face nil))
 	ad-do-it)
-    ad-do-it))
+        ad-do-it))
+
+(load-theme 'manoj-dark)
+
+(setq fci-rule-width 1)
+(setq fci-rule-color "darkblue")

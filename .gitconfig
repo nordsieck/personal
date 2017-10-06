@@ -1,5 +1,7 @@
+# This is Git's per-user configuration file.
 [user]
 name = Theodore Nordsieck
+email = theodore.nordsieck@gmail.com
 [core]
 editor = emacs
 [github]
@@ -24,3 +26,7 @@ fixup = !git add --all . && git commit --amend --no-edit
 
 # diff master
 dm = diff master...
+[push]
+	default = simple
+[http]
+	cookiefile = /Users/theodorenordsieck/.gitcookies
